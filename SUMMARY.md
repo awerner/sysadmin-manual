@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [FreeBSD](/freebsd.md)
+* [FreeBSD](/freebsd/README.md)
 
 
 
