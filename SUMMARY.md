@@ -1,5 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [FreeBSD](chapter1.md)
+* [FreeBSD](/freebsd.md)
+
+
 
