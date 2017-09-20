@@ -1,3 +1,6 @@
-# My Awesome Book
+# Sysadmin Manual
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+This book serves as a reference for all topics a modern sysadmin should have a understanding of.
+
+All content is released under the BSD Documentation License, which itself is derived from the FreeBSD Documentation License.
+
