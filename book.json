@@ -2,7 +2,18 @@
     "plugins": ["theme-api"],
     "pluginsConfig": {
         "theme-api": {
-            "theme": "dark"
+            "theme": "dark",
+            "languages": [
+              {
+                "lang": "fbsd",
+                "name": "FreeBSD",
+                "default": true
+              },
+              {
+                "lang": "deb",
+                "name": "Debian"
+              }
+            ]
         }
     }
 }
