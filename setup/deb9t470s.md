@@ -26,7 +26,13 @@ Enter your Full Name \(not username\), and on the next page your desired usernam
 
 ## Partitioning the disk
 
-Select the 
+Select the first option to use the guided partitioning, and select the third option to use the whole disk with encrypted LVM. Now select your internal drive from the list. If you have booted from USB, the installer medium will also show up, so be careful to select the right disk.
+
+Now select the the third option, to create separate `/home`, `/var` and `/tmp` partitions. Select Yes to setup LVM and enter your encryption master password. The longer the password, the safer.
+
+On the next screen you see the to be created partitions. Select the `/boot` partition and change the Filesystem type to `ext4`.  Select the last option in the overview to apply the changes.
+
+
 
 
 
