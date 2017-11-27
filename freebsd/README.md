@@ -28,5 +28,15 @@ freebsd-update fetch
 freebsd-update install
 ```
 
+## Change system configuration
+
+```
+sysrc <key>=<value>
+sysrc -a # show only changed settings
+sysrc <key>
+```
+
+
+
 
 
