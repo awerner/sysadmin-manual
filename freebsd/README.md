@@ -8,3 +8,25 @@ FreeBSD is a free and open source UNIX-like Operating System well-known for its 
 
 [https://www.freebsd.org/](https://www.freebsd.org/) is the Homepage for FreeBSD, with well-wirtten documentation for almost any aspect of the system. Its Documentation for sure is one of the strong benefits of FreeBSD
 
+## Installation of software
+
+```bash
+pkg install <pkgname>
+```
+
+## Update of software
+
+```
+pkg update
+pkg upgrade
+```
+
+## System update
+
+```
+freebsd-update fetch
+freebsd-update install
+```
+
+
+
