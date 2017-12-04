@@ -10,8 +10,19 @@ FreeBSD is a free and open source UNIX-like Operating System well-known for its 
 
 ## Installation of software
 
+`pkg` is the binary package manager of FreeBSD:
+
 ```bash
 pkg install <pkgname>
+```
+
+If you prefer to compile the software yourself, e.g. if you need to enable build options:
+
+```
+portsnap fetch extract # only first time running portsnap
+portsnap fetch update
+cd /usr/ports/a/b
+make config-recursive install clean
 ```
 
 ## Update of software
@@ -19,6 +30,14 @@ pkg install <pkgname>
 ```
 pkg update
 pkg upgrade
+```
+
+To update all source ports:
+
+```
+pkg install portmaster
+portsnap fetch update
+portmaster -a
 ```
 
 ## System update
@@ -29,6 +48,8 @@ freebsd-update install
 ```
 
 ## Change system configuration
+
+The main system configuration file ist `/etc/rc.conf`. FreeBSD comes with a tool that allows changing that file, showing non-default values and getting values:
 
 ```
 sysrc <key>=<value>
