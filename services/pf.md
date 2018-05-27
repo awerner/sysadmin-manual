@@ -15,5 +15,18 @@ sysrc pflog_enable=YES
 sysrc pflog_logfile=/var/log/pflog
 ```
 
+After creation of a working config, the firewall can then be started:
+
+```bash
+service pf start
+service pflog start
+```
+
+## Configuration
+
+The main configuration file for pf is `/etc/pf.conf`
+
+
+
 
 
