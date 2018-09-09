@@ -57,22 +57,25 @@ Post-Setup
 
 Login to your new machine, and edit the file `/etc/apt/sources.list`to contain `contrib non-free`after each occurence of`main`:
 
-```
-deb http://deb.debian.org/debian/ stretch main contrib non-free
-# repeat for every line
-```
+.. code-block:: bash
+
+   deb http://deb.debian.org/debian/ stretch main contrib non-free
+   # repeat for every line
+
 
 Enable the backports repository by adding the following to the new file `/etc/apt/sources.list.d/backports.list`:
 
-```
-deb http://ftp.debian.org/debian stretch-backports main contrib
-```
+.. code-block:: bash
+
+   deb http://ftp.debian.org/debian stretch-backports main contrib
+
 
 Update the package repositories and install the wifi firmware as well as virtualbox:
 
-```
-apt update
-apt install firmware-iwlwifi virtualbox
-```
+.. code-block:: bash
+
+   apt update
+   apt install firmware-iwlwifi virtualbox
+
 
 Now reboot to make sure the virtualbox modules and wifi firmware are loaded on boot.
