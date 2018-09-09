@@ -1,8 +1,10 @@
-# Setup of Debian 9 on a Lenovo Thinkpad 470
+Setup of Debian 9 on a Lenovo Thinkpad 470
+##########################################
 
-## Preparation
+Preparation
+-----------
 
-Grab a copy of the current Netinstall ISO, at the time of writing it can be found at [https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.2.1-amd64-netinst.iso](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.2.1-amd64-netinst.iso)
+Grab a copy of the current Netinstall ISO, at the time of writing it can be found at https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-9.2.1-amd64-netinst.iso
 
 Image an empty CD or USB stick with that ISO - how to do that depends on your current operating system and is out of scope for this guide.
 
@@ -10,21 +12,23 @@ Enter the EFI of the the notebook and make sure that `Secure Boot` under the `Se
 
 Insert your created boot medium and reboot.
 
-## Booting the Installer
+Booting the Installer
+---------------------
 
 In the `Debian GNU/Linux installer boot menu` select `Install`.
 
 Select your native Language, Country and  Keyboard layout in the next dialogues.
 
-Make sure your network cable is connected to the notebook before confiriming the Keyboard selection, as the Installer will try to auto-detect the network in the next step. When you are asked to load the non-free firmware from an external disk, select No, and select the wired network connection \(`enp...`\) as primary interface.
+Make sure your network cable is connected to the notebook before confiriming the Keyboard selection, as the Installer will try to auto-detect the network in the next step. When you are asked to load the non-free firmware from an external disk, select No, and select the wired network connection (`enp...`) as primary interface.
 
 Now enter the hostname for your new laptop, and your domain name in the next dialogue. If you have a local network, set your domain name to `local` or another name that identifies your network.
 
-Now leave the fields for the `root`password blank twice. This tells the Installer to disable the root login, and your User that will be created afterwards will be granted sudo-rights.
+Now leave the fields for the `root` password blank twice. This tells the Installer to disable the root login, and your User that will be created afterwards will be granted sudo-rights.
 
-Enter your Full Name \(not username\), and on the next page your desired username. Provide a secure password twice.
+Enter your Full Name (not username), and on the next page your desired username. Provide a secure password twice.
 
-## Partitioning the disk
+Partitioning the disk
+---------------------
 
 Select the first option to use the guided partitioning, and select the third option to use the whole disk with encrypted LVM. Now select your internal drive from the list. If you have booted from USB, the installer medium will also show up, so be careful to select the right disk.
 
@@ -32,7 +36,8 @@ Now select the fourth option, to create separate `/home`, `/var` and `/tmp` part
 
 On the next screen you see the to be created partitions. Select the `/boot` partition and change the Filesystem type to `ext4`.  Select the last option in the overview to apply the changes.
 
-## Software selection
+Software selection
+------------------
 
 You are prompted to add another CD/DVD, select `no`. Now choose the nearest mirror, it should be preselected with a sane default, so just choose this. You are prompted to partake in the package usage survey, this will send statistics about the packages you install from the official repositories to the debian maintainers.
 
@@ -42,11 +47,13 @@ During the installation of the selected packages, you might get prompted about t
 
 If you are asked which display manager to use by default, choose `gdm3`.
 
-## Finishing the setup
+Finishing the setup
+-------------------
 
-Choose `yes`to install the GRUB boot manager onto the boot disk, and select the SSD on the next page.
+Choose `yes` to install the GRUB boot manager onto the boot disk, and select the SSD on the next page.
 
-## Post-Setup
+Post-Setup
+----------
 
 Login to your new machine, and edit the file `/etc/apt/sources.list`to contain `contrib non-free`after each occurence of`main`:
 
@@ -69,4 +76,3 @@ apt install firmware-iwlwifi virtualbox
 ```
 
 Now reboot to make sure the virtualbox modules and wifi firmware are loaded on boot.
-
