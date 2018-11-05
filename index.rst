@@ -17,6 +17,7 @@ All content is released under the BSD Documentation License, which itself is der
    services/unbound
    services/zfs
    setup/deb9t470
+   resources/index
 
 
 
@@ -24,5 +25,4 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
